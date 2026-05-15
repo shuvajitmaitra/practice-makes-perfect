@@ -27,7 +27,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Pages with repository bootstrap
+        if: ${{ secrets.PAGES_PAT != '' }}
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+          token: ${{ secrets.PAGES_PAT }}
+
       - name: Configure Pages
+        if: ${{ secrets.PAGES_PAT == '' }}
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
