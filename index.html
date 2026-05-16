@@ -54,7 +54,7 @@
     .block {
       position: relative;
       font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
-      font-size: clamp(3.8rem, 9vw, 7rem);
+      font-size: calc(clamp(4.4rem, 10vw, 8rem) + 10px);
       line-height: 0.9;
       letter-spacing: 0.02em;
       color: var(--block-text);
@@ -68,7 +68,7 @@
       top: 45.5%;
       transform: translate(-50%, -50%);
       font-family: "Brush Script MT", "Segoe Script", cursive;
-      font-size: clamp(4.6rem, 10vw, 8rem);
+      font-size: clamp(5.2rem, 11vw, 9rem);
       line-height: 1;
       color: var(--script-text);
       white-space: nowrap;
@@ -77,11 +77,11 @@
 
     @media (max-width: 560px) {
       .block {
-        font-size: clamp(3.1rem, 11vw, 5rem);
+        font-size: calc(clamp(3.5rem, 12vw, 5.8rem) + 10px);
       }
 
       .script {
-        font-size: clamp(4rem, 14vw, 6.2rem);
+        font-size: clamp(4.5rem, 15vw, 7rem);
       }
     }
   </style>
